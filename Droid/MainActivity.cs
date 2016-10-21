@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using de.crazynexus.touchinorder;
 
 namespace TouchInOrder.Droid
 {
@@ -12,6 +13,8 @@ namespace TouchInOrder.Droid
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
+
+			User user = new User();
 
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);

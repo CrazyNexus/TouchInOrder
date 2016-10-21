@@ -6,7 +6,7 @@
     <ProjectGuid>{227D9FBA-498B-44C6-961D-E75EDBC01D84}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TouchInOrder.iOS</RootNamespace>
+    <RootNamespace>de.crazynexus.iOS</RootNamespace>
     <AssemblyName>TouchInOrder.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="touchinorder\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
