@@ -25,7 +25,7 @@ namespace de.crazynexus.Droid
 
 			// and create a new button
 			var button = new Button(this);
-			button.Text = "Hallo Thomas";
+			button.Text = "Hallo Thomas-so geil";
 			gameLayout.AddView(button);
 
 		}
