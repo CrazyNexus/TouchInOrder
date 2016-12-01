@@ -28,6 +28,7 @@ namespace de.crazynexus.Droid
 			button.Text = "Hallo Thomas-so geil";
 			gameLayout.AddView(button);
 
+
 		}
 	}
 }
