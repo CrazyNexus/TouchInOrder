@@ -17,7 +17,6 @@ namespace de.crazynexus.Droid
          SetContentView(Resource.Layout.Main);
 
          GameView gameView = new GameView(this);
-         //gameView.displayButtons();
 
          GameController controller = new GameController(gameView);
          controller.startGame();
