@@ -1,10 +1,14 @@
 ﻿using System;
-namespace de.crazynexus
+using System.Diagnostics;
+using Xamarin.Forms;
+
+namespace de.crazynexus.touchinorder
 {
-   public class Users
+   public class User
    {
-      public Users()
+      public User()
       {
+         Debug.WriteLine("User Constructor");
       }
    }
 }
