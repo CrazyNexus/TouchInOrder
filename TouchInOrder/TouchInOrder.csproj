@@ -31,6 +31,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="touchinorder\controller\GameController.cs" />
     <Compile Include="touchinorder\Users.cs" />
+    <Compile Include="touchinorder\UI\IGameView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="touchinorder\" />

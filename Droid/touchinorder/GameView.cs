@@ -4,7 +4,7 @@ using Android.Widget;
 
 namespace de.crazynexus.Droid
 {
-   public class GameView
+   public class GameView : IGameView
    {
       Activity activity;
       LinearLayout gameLayout;
