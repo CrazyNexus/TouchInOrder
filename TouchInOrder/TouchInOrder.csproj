@@ -33,6 +33,7 @@
     <Compile Include="touchinorder\Users.cs" />
     <Compile Include="touchinorder\UI\IGameView.cs" />
     <Compile Include="touchinorder\UI\IGameButton.cs" />
+    <Compile Include="touchinorder\controller\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="touchinorder\" />
