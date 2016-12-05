@@ -21,8 +21,7 @@ namespace de.crazynexus
 		{
 			Debug.WriteLine("startGame()");
 
-			buttons = Util.randomizedList(buttons);
-			gameView.displayButtons(buttons);
+			gameView.displayButtons(Util.randomizedList(buttons));
 		}
 
 		void generateButtons()
