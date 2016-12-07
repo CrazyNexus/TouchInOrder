@@ -21,9 +21,13 @@ namespace de.crazynexus.Droid
          }
       }
 
-      public GameButton(Context context)
+      public GameButton(Context context, Touched handler)
       {
          nativeButton = new Button(context);
+         nativeButton.Click += delegate
+         {
+            handler(this);
+         };
       }
    }
 }

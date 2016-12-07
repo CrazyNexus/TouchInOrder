@@ -4,36 +4,64 @@ using System.Diagnostics;
 
 namespace de.crazynexus
 {
-	public class GameController
-	{
-		IGameView gameView;
-		List<IGameButton> buttons;
+   public delegate void Touched(IGameButton button);
 
-		public GameController(IGameView gameView)
-		{
-			Debug.WriteLine("GameController");
+   public class GameController
+   {
+      IGameView gameView;
+      List<IGameButton> buttons;
 
-			this.gameView = gameView;
-			generateButtons();
-		}
+      public GameController(IGameView gameView)
+      {
+         Debug.WriteLine("GameController");
 
-		public void startGame()
-		{
-			Debug.WriteLine("startGame()");
+         this.gameView = gameView;
+         generateButtons();
+      }
 
-			gameView.displayButtons(Util.randomizedList(buttons));
-		}
+      public void startGame()
+      {
+         Debug.WriteLine("startGame()");
 
-		void generateButtons()
-		{
-			buttons = new List<IGameButton>();
-			for (int i = 0; i < 9; i++)
-			{
-				IGameButton newButton = gameView.createGameButton();
-				newButton.Text = "" + (i + 1);
-				buttons.Add(newButton);
-			}
-		}
+         gameView.displayButtons(Util.randomizedList(buttons));
+      }
 
-	}
+      void generateButtons()
+      {
+         buttons = new List<IGameButton>();
+         for (int i = 0; i < 9; i++)
+         {
+            IGameButton newButton = gameView.createGameButton(evaluateTouch);
+            newButton.Text = "" + (i + 1);
+            buttons.Add(newButton);
+         }
+      }
+
+      void evaluateTouch(IGameButton sender)
+      {
+         Debug.WriteLine("Click-EventHandler, send is " + sender);
+
+         if (buttons.Count == 0)
+         {
+            return;
+         }
+
+
+         if (sender == buttons[0])
+         {
+            Debug.WriteLine("Richtig geklickt");
+            buttons.RemoveAt(0);
+         }
+         else
+         {
+            Debug.WriteLine("Falsch geklickt");
+         }
+
+         if (buttons.Count == 0)
+         {
+            Debug.WriteLine("Du hast gewonnen");
+         }
+      }
+
+   }
 }
