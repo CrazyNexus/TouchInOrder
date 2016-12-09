@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace TouchInOrder.iOS
+namespace de.crazynexus.iOS
 {
 	public class Application
 	{
